@@ -1,0 +1,6 @@
+{
+  "name": "backend-test",
+  "version": "1.0.0",
+  "description": "Simple node server for Docker exercise",
+  "main": "server.js"
+}
