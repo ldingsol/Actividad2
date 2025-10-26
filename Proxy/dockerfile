@@ -1,0 +1,10 @@
+FROM nginx:alpine
+
+# Copia el script de inicio y lo hace ejecutable
+COPY docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+# Establece el nuevo script como ENTRYPOINT
+ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]
+
+CMD ["nginx", "-g", "daemon off;"]
